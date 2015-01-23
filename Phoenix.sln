@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phoenix.Console", "Phoenix.Console\Phoenix.Console.csproj", "{63827B6A-308E-4B8E-AA5D-98202D6A5865}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phoenix.Core", "Phoenix.Core\Phoenix.Core.csproj", "{5404A226-35DF-4A0D-8964-9A60EB012622}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phoenix.Game", "Phoenix.Game\Phoenix.Game.csproj", "{E6C3E299-BBB0-41D0-AFE2-513D1A2AAD13}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63827B6A-308E-4B8E-AA5D-98202D6A5865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63827B6A-308E-4B8E-AA5D-98202D6A5865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63827B6A-308E-4B8E-AA5D-98202D6A5865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63827B6A-308E-4B8E-AA5D-98202D6A5865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5404A226-35DF-4A0D-8964-9A60EB012622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5404A226-35DF-4A0D-8964-9A60EB012622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5404A226-35DF-4A0D-8964-9A60EB012622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5404A226-35DF-4A0D-8964-9A60EB012622}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6C3E299-BBB0-41D0-AFE2-513D1A2AAD13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6C3E299-BBB0-41D0-AFE2-513D1A2AAD13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6C3E299-BBB0-41D0-AFE2-513D1A2AAD13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6C3E299-BBB0-41D0-AFE2-513D1A2AAD13}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
