@@ -13,7 +13,7 @@ namespace Phoenix.Game
         private static Renderer _instance = new Renderer();
         public static Renderer Instance { get { return _instance ?? (_instance = new Renderer()); } }
 
-        public Renderer() : base("SAY", "YELL", "WHISPER")
+        public Renderer() : base("SAY", "SAYSKIP", "YELL", "WHISPER")
         {
             
         }
@@ -24,6 +24,10 @@ namespace Phoenix.Game
             {
                 case "SAY":
                     Write(message.Value.ToString());
+                    break;
+
+                case "SAYSKIP":
+                    Write(message.Value.ToString(), true);
                     break;
             }
         }
@@ -39,12 +43,13 @@ namespace Phoenix.Game
             return s.ToString();
         }
 
-        public void Write(string message)
+        public void Write(string message, bool skipLine = false)
         {
             var parts = message.Split('|');
             var encodedString = new StringBuilder();
             Colors color;
-
+            if (skipLine)
+                encodedString.AppendLine("<br>");
             for (int i = 0; i < parts.Length; i++)
             {
                 if (!string.IsNullOrWhiteSpace(parts[i]))
@@ -58,18 +63,20 @@ namespace Phoenix.Game
                 //else
                     //Console.Write(string.Format("{0}", parts[i]));
             }
+           
             MudGame.Instance.BroadcastMessage(encodedString.ToString());
         }
 
 
         public enum Colors
         {
-            Red = 0,
-            Orange,
-            Yellow,
+            WhiteSmoke = 0,
+            CadetBlue,
+            Gray,
             Green,
             Blue,
-            Violet
+            Violet,
+            
         }
     }
 }

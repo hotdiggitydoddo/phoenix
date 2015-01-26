@@ -12,16 +12,16 @@ namespace Phoenix.Game
     public class Room
     {
         private static int _nextId = 1;
-        private List<Entity> _entities; 
+        public List<Entity> Entities { get; private set; } 
         public int Id { get; private set; }
-        public string Name { get; protected set; }
-        public string ShortDescription { get; protected set; }
+        public string Name { get; set; }
+        public string ShortDescription { get; set; }
 
         public Room()
         {
             Id = _nextId;
             _nextId++;
-            _entities = new List<Entity>();
+            Entities = new List<Entity>();
         }
 
 

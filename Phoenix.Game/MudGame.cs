@@ -14,20 +14,22 @@ namespace Phoenix.Game
     {
         private static MudGame _instance;
         private Timer _timer;
-        
+        private RoomModule _roomModule;
         private NewAdventurerModule _newAdventurerModule;
         public static MudGame Instance { get { return _instance ?? (_instance = new MudGame()); } }
-        public List<Room> Rooms { get; set; }
         public IHubContext Hub { get; private set; }
+
+        public RoomModule RoomModule;
         public Dictionary<Guid, User> Users;
         private bool updating = false;
         public MudGame()
         {
             HostingEnvironment.RegisterObject(this);
-            Rooms = new List<Room>();
             Hub = GlobalHost.ConnectionManager.GetHubContext<GameHub>();
             Users = new Dictionary<Guid, User>();
             _newAdventurerModule = new NewAdventurerModule();
+            _roomModule = new RoomModule();
+            _roomModule.InitializeRooms();
             _timer = new Timer(OnTimerElapsed, null, TimeSpan.FromSeconds(0), TimeSpan.FromSeconds(.1));
         }
 

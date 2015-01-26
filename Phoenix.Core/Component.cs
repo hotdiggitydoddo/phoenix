@@ -3,10 +3,8 @@
     public abstract class Component
     {
         public Entity Owner { get; set; }
-        public Component()
-        {
-            
-        }
+
+        public virtual bool OkMessage(Message message) { return true; }
     }
 
     public interface IUpdateable

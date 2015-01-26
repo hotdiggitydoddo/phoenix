@@ -16,6 +16,11 @@ namespace Phoenix.Core
             _nextId++;
         }
 
+        public bool OkMessage(Message message)
+        {
+            return _components.All(component => component.OkMessage(message));
+        }
+
         public bool HasComponent<T>() where T : Component
         {
             return _components.Exists(x => x.GetType() == typeof(T));
